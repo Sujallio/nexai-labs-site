@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import { Logo } from "./Logo";
 
 const links = [
   { to: "/services", label: "Services" },
