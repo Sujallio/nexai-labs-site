@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 const links = [
-  { href: "#services", label: "Services" },
-  { href: "#advantage", label: "Advantage" },
-  { href: "#process", label: "Process" },
-  { href: "#work", label: "Work" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#faq", label: "FAQ" },
-];
+  { to: "/services", label: "Services" },
+  { to: "/advantage", label: "Advantage" },
+  { to: "/process", label: "Process" },
+  { to: "/work", label: "Work" },
+  { to: "/pricing", label: "Pricing" },
+  { to: "/faq", label: "FAQ" },
+] as const;
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,33 +35,35 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <a href="#top" className="flex items-center gap-2.5">
+        <Link to="/" className="flex items-center gap-2.5">
           <div className="relative size-7 rounded-md bg-brand">
             <div className="absolute inset-1 rounded-sm bg-background" />
             <div className="absolute inset-2 rounded-sm bg-brand" />
           </div>
           <span className="font-semibold tracking-tight">NexaAI Labs</span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-muted-foreground transition-colors hover:text-foreground"
+            <Link
+              key={l.to}
+              to={l.to}
+              activeProps={{ className: "text-foreground" }}
+              inactiveProps={{ className: "text-muted-foreground" }}
+              className="transition-colors hover:text-foreground"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="rounded-md bg-brand px-4 py-2 text-sm font-semibold text-background transition-colors hover:bg-brand/90"
           >
             Get Consultation
-          </a>
+          </Link>
         </div>
 
         <button
@@ -76,22 +79,22 @@ export function Nav() {
         <div className="border-t border-border bg-background/95 backdrop-blur md:hidden">
           <div className="flex flex-col gap-1 px-6 py-4">
             {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
+              <Link
+                key={l.to}
+                to={l.to}
                 onClick={() => setOpen(false)}
                 className="rounded px-2 py-2 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               onClick={() => setOpen(false)}
               className="mt-2 rounded-md bg-brand px-4 py-2.5 text-center text-sm font-semibold text-background"
             >
               Get Consultation
-            </a>
+            </Link>
           </div>
         </div>
       )}
