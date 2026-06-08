@@ -7,13 +7,13 @@ import { TechStack } from "@/components/site/TechStack";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — NexaAI Labs" },
+      { title: "Services — Auxmet" },
       {
         name: "description",
         content:
           "Custom software, web & mobile apps, AI solutions, and digital marketing — delivered faster with AI-powered engineering workflows.",
       },
-      { property: "og:title", content: "Services — NexaAI Labs" },
+      { property: "og:title", content: "Services — Auxmet" },
       {
         property: "og:description",
         content:

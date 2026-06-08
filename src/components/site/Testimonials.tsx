@@ -4,7 +4,7 @@ import { SectionHeader } from "./SectionHeader";
 const items = [
   {
     quote:
-      "We replaced an entire dev shop with NexaAI. The delivery velocity is genuinely unmatched.",
+      "We replaced an entire dev shop with Auxmet. The delivery velocity is genuinely unmatched.",
     name: "Sara Lindqvist",
     role: "CTO, fintech startup",
   },

@@ -6,13 +6,13 @@ import { Process } from "@/components/site/Process";
 export const Route = createFileRoute("/process")({
   head: () => ({
     meta: [
-      { title: "Our Process — NexaAI Labs" },
+      { title: "Our Process — Auxmet" },
       {
         name: "description",
         content:
           "A transparent, AI-augmented delivery process — from discovery to launch and beyond.",
       },
-      { property: "og:title", content: "Our Process — NexaAI Labs" },
+      { property: "og:title", content: "Our Process — Auxmet" },
       {
         property: "og:description",
         content: "How we plan, build, and ship modern software with AI.",

@@ -9,7 +9,7 @@ const clients = [
     industry: "Fintech / Identity",
     type: "AI Document Verification Platform",
     quote:
-      "NexaAI shipped our MVP in six weeks — what our previous agency quoted six months for. Engineering quality is genuinely senior.",
+      "Auxmet shipped our MVP in six weeks — what our previous agency quoted six months for. Engineering quality is genuinely senior.",
   },
   {
     flag: "🇬🇧",

@@ -7,13 +7,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "NexaAI Labs — AI-Powered Software Development Agency" },
+      { title: "Auxmet — AI-Powered Software Development Agency" },
       {
         name: "description",
         content:
           "Building smart digital products faster with AI. Custom software, websites, mobile apps, AI agents & RAG, and digital marketing for startups and enterprises.",
       },
-      { property: "og:title", content: "NexaAI Labs — AI-Powered Software Development" },
+      { property: "og:title", content: "Auxmet — AI-Powered Software Development" },
       {
         property: "og:description",
         content:
