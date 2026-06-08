@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import { Logo } from "./Logo";
 
 const links = [
   { to: "/services", label: "Services" },
@@ -36,10 +37,7 @@ export function Nav() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link to="/" className="flex items-center gap-2.5">
-          <div className="relative size-7 rounded-md bg-brand">
-            <div className="absolute inset-1 rounded-sm bg-background" />
-            <div className="absolute inset-2 rounded-sm bg-brand" />
-          </div>
+          <Logo className="size-7" />
           <span className="font-semibold tracking-tight">Auxmet</span>
         </Link>
 
