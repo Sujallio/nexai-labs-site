@@ -5,8 +5,6 @@ const rows = [
   { feature: "Delivery time", trad: "3–6 months", nexa: "4–8 weeks" },
   { feature: "Typical project cost", trad: "$40k+", nexa: "$15k–25k" },
   { feature: "AI workflows", trad: false, nexa: true },
-  { feature: "Senior engineer access", trad: false, nexa: true },
-  { feature: "Automated QA", trad: false, nexa: true },
   { feature: "Post-launch support", trad: "Business hours", nexa: "24/7 AI-assisted" },
   { feature: "Iterations included", trad: "Fixed scope", nexa: "Flexible" },
 ];
