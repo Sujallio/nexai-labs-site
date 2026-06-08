@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { Logo } from "./Logo";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -9,10 +10,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center gap-2.5">
-              <div className="relative size-7 rounded-md bg-brand">
-                <div className="absolute inset-1 rounded-sm bg-background" />
-                <div className="absolute inset-2 rounded-sm bg-brand" />
-              </div>
+              <Logo className="size-7" />
               <span className="font-semibold tracking-tight">Auxmet</span>
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
