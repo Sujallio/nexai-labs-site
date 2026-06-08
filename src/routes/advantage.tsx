@@ -7,13 +7,13 @@ import { Stats } from "@/components/site/Stats";
 export const Route = createFileRoute("/advantage")({
   head: () => ({
     meta: [
-      { title: "The AI Advantage — NexaAI Labs" },
+      { title: "The AI Advantage — Auxmet" },
       {
         name: "description",
         content:
-          "How AI-powered development helps NexaAI Labs ship 40% faster at 30% lower cost without sacrificing quality.",
+          "How AI-powered development helps Auxmet ship 40% faster at 30% lower cost without sacrificing quality.",
       },
-      { property: "og:title", content: "The AI Advantage — NexaAI Labs" },
+      { property: "og:title", content: "The AI Advantage — Auxmet" },
       {
         property: "og:description",
         content: "AI-augmented engineering for faster, leaner delivery.",

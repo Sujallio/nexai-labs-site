@@ -7,16 +7,16 @@ import { InquiryForm } from "@/components/site/InquiryForm";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — NexaAI Labs" },
+      { title: "Contact — Auxmet" },
       {
         name: "description",
         content:
           "Tell us about your project — get a free consultation and an AI-assisted estimate within 24 hours.",
       },
-      { property: "og:title", content: "Contact — NexaAI Labs" },
+      { property: "og:title", content: "Contact — Auxmet" },
       {
         property: "og:description",
-        content: "Start your project with NexaAI Labs.",
+        content: "Start your project with Auxmet.",
       },
     ],
     links: [{ rel: "canonical", href: "/contact" }],

@@ -13,7 +13,7 @@ export function Footer() {
                 <div className="absolute inset-1 rounded-sm bg-background" />
                 <div className="absolute inset-2 rounded-sm bg-brand" />
               </div>
-              <span className="font-semibold tracking-tight">NexaAI Labs</span>
+              <span className="font-semibold tracking-tight">Auxmet</span>
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
               Building smart digital products faster with AI. Custom software, web, mobile, and
@@ -52,7 +52,7 @@ function FooterYear({ year }: { year: number }) {
   useEffect(() => setY(new Date().getFullYear()), []);
   return (
     <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row md:items-center">
-      <p>© {y} NexaAI Labs. All rights reserved.</p>
+      <p>© {y} Auxmet. All rights reserved.</p>
       <p className="font-mono">Built with AI-powered engineering.</p>
     </div>
   );

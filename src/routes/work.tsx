@@ -8,13 +8,13 @@ import { Testimonials } from "@/components/site/Testimonials";
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
-      { title: "Work — NexaAI Labs" },
+      { title: "Work — Auxmet" },
       {
         name: "description",
         content:
-          "Selected case studies and client testimonials from NexaAI Labs — AI products, SaaS, web, and mobile.",
+          "Selected case studies and client testimonials from Auxmet — AI products, SaaS, web, and mobile.",
       },
-      { property: "og:title", content: "Our Work — NexaAI Labs" },
+      { property: "og:title", content: "Our Work — Auxmet" },
       {
         property: "og:description",
         content: "AI-driven projects we've shipped for startups and enterprises.",

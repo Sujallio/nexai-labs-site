@@ -40,7 +40,7 @@ export function Nav() {
             <div className="absolute inset-1 rounded-sm bg-background" />
             <div className="absolute inset-2 rounded-sm bg-brand" />
           </div>
-          <span className="font-semibold tracking-tight">NexaAI Labs</span>
+          <span className="font-semibold tracking-tight">Auxmet</span>
         </Link>
 
         <nav className="hidden items-center gap-8 text-sm font-medium md:flex">

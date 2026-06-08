@@ -77,23 +77,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "NexaAI Labs — AI-Powered Software Development Agency" },
+      { title: "Auxmet — AI-Powered Software Development Agency" },
       {
         name: "description",
         content:
-          "NexaAI Labs builds smart digital products faster with AI. Custom software, web & mobile apps, AI solutions, and digital marketing for startups and enterprises.",
+          "Auxmet builds smart digital products faster with AI. Custom software, web & mobile apps, AI solutions, and digital marketing for startups and enterprises.",
       },
-      { name: "author", content: "NexaAI Labs" },
-      { property: "og:title", content: "NexaAI Labs — AI-Powered Software Development" },
+      { name: "author", content: "Auxmet" },
+      { property: "og:title", content: "Auxmet — AI-Powered Software Development" },
       {
         property: "og:description",
         content:
           "Building smart digital products faster with AI. Custom software, mobile, AI agents, RAG, and growth — at startup-friendly pricing.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "NexaAI Labs" },
+      { property: "og:site_name", content: "Auxmet" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "NexaAI Labs" },
+      { name: "twitter:title", content: "Auxmet" },
       {
         name: "twitter:description",
         content: "AI-powered software development. 40% faster, 30% leaner.",
@@ -114,7 +114,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "NexaAI Labs",
+          name: "Auxmet",
           description:
             "AI-powered software development agency building websites, applications, and AI solutions.",
           url: "/",

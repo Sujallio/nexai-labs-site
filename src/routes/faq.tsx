@@ -6,16 +6,16 @@ import { FAQ } from "@/components/site/FAQ";
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ — NexaAI Labs" },
+      { title: "FAQ — Auxmet" },
       {
         name: "description",
         content:
-          "Answers to common questions about NexaAI Labs — process, pricing, AI, timelines, and quality.",
+          "Answers to common questions about Auxmet — process, pricing, AI, timelines, and quality.",
       },
-      { property: "og:title", content: "FAQ — NexaAI Labs" },
+      { property: "og:title", content: "FAQ — Auxmet" },
       {
         property: "og:description",
-        content: "Common questions about working with NexaAI Labs.",
+        content: "Common questions about working with Auxmet.",
       },
     ],
     links: [{ rel: "canonical", href: "/faq" }],

@@ -28,7 +28,7 @@ export function Pricing() {
                 <th className="px-6 py-4 text-sm font-semibold text-muted-foreground">
                   Traditional Agency
                 </th>
-                <th className="px-6 py-4 text-sm font-semibold text-brand">NexaAI Labs</th>
+                <th className="px-6 py-4 text-sm font-semibold text-brand">Auxmet</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
