@@ -35,7 +35,7 @@ export function Contact() {
               icon: CalendarClock,
               label: "Book a call",
               value: "30-min consultation",
-              href: "#inquiry",
+              href: "/contact",
             },
           ].map((c) => (
             <a
