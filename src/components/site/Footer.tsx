@@ -27,8 +27,10 @@ export function Footer() {
               { label: "Process", to: "/process" },
               { label: "Work", to: "/work" },
               { label: "Pricing", to: "/pricing" },
+              { label: "Book a Call", to: "/book" },
             ]}
           />
+
           <FooterCol
             title="Company"
             items={[
