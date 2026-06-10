@@ -145,7 +145,16 @@ export function InquiryForm() {
                 <Field label="Phone" error={errors.phone?.message}>
                   <input {...register("phone")} placeholder="+1 555 0100" className="input" />
                 </Field>
+                <Field label="Country" error={errors.country?.message}>
+                  <select {...register("country")} className="input">
+                    <option value="">Select…</option>
+                    {countries.map((c) => (
+                      <option key={c}>{c}</option>
+                    ))}
+                  </select>
+                </Field>
                 <Field label="Project type" error={errors.projectType?.message}>
+
                   <select {...register("projectType")} className="input">
                     <option value="">Select…</option>
                     {projectTypes.map((p) => (
