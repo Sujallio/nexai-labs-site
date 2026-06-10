@@ -9,6 +9,7 @@ const schema = z.object({
   company: z.string().trim().max(100).optional().or(z.literal("")),
   email: z.string().trim().email("Valid email required").max(255),
   phone: z.string().trim().max(40).optional().or(z.literal("")),
+  country: z.string().min(1, "Select your country"),
   projectType: z.string().min(1, "Select a project type"),
   budget: z.string().min(1, "Select a budget"),
   timeline: z.string().min(1, "Select a timeline"),
@@ -27,8 +28,24 @@ const projectTypes = [
   "Other",
 ];
 
+const countries = [
+  "United States",
+  "United Kingdom",
+  "Canada",
+  "Australia",
+  "Germany",
+  "France",
+  "Netherlands",
+  "Spain",
+  "India",
+  "United Arab Emirates",
+  "Singapore",
+  "Other",
+];
+
 const budgets = ["< $5k", "$5k – $15k", "$15k – $50k", "$50k – $150k", "$150k+"];
 const timelines = ["ASAP", "1–3 months", "3–6 months", "6+ months", "Flexible"];
+
 
 export function InquiryForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -128,7 +145,16 @@ export function InquiryForm() {
                 <Field label="Phone" error={errors.phone?.message}>
                   <input {...register("phone")} placeholder="+1 555 0100" className="input" />
                 </Field>
+                <Field label="Country" error={errors.country?.message}>
+                  <select {...register("country")} className="input">
+                    <option value="">Select…</option>
+                    {countries.map((c) => (
+                      <option key={c}>{c}</option>
+                    ))}
+                  </select>
+                </Field>
                 <Field label="Project type" error={errors.projectType?.message}>
+
                   <select {...register("projectType")} className="input">
                     <option value="">Select…</option>
                     {projectTypes.map((p) => (

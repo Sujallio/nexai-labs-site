@@ -95,17 +95,18 @@ export function Hero() {
               <div className="size-2.5 rounded-full bg-yellow-500/60" />
               <div className="size-2.5 rounded-full bg-brand/60" />
               <span className="ml-3 font-mono text-[11px] text-muted-foreground">
-                nexaai-labs/platform — main
+                auxmet/platform — main
               </span>
             </div>
             <div className="grid gap-3 font-mono text-[12px] leading-relaxed">
               <div className="text-muted-foreground">
-                <span className="text-brand">$</span> nexa generate --type=saas --ai=on
+                <span className="text-brand">$</span> auxmet generate --type=saas --ai=on
               </div>
               <div className="text-muted-foreground">→ Analyzing requirements …</div>
               <div className="text-muted-foreground">→ Drafting architecture (Next.js + Postgres)</div>
               <div className="text-muted-foreground">→ Scaffolding 27 components, 14 endpoints</div>
               <div className="text-brand">✓ Production-ready scaffold in 1m 42s</div>
+
               <div className="mt-2 grid grid-cols-3 gap-3 pt-3">
                 {["Plan", "Build", "Ship"].map((s, i) => (
                   <div key={s} className="rounded-md border border-border bg-surface px-3 py-2">

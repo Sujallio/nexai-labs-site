@@ -3,6 +3,8 @@ import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { Contact } from "@/components/site/Contact";
 import { InquiryForm } from "@/components/site/InquiryForm";
+import { Booking } from "@/components/site/Booking";
+import { TrustBadges } from "@/components/site/TrustBadges";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -30,6 +32,8 @@ function ContactPage() {
       <Nav />
       <main className="pt-8">
         <InquiryForm />
+        <TrustBadges />
+        <Booking />
         <Contact />
       </main>
       <Footer />
