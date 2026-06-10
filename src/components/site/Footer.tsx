@@ -33,9 +33,11 @@ export function Footer() {
             title="Company"
             items={[
               { label: "FAQ", to: "/faq" },
+              { label: "Careers", to: "/careers" },
               { label: "Contact", to: "/contact" },
             ]}
           />
+
         </div>
 
         <FooterYear year={year} />
