@@ -1,7 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
-import { Stats } from "@/components/site/Stats";
+import { TrustBadges } from "@/components/site/TrustBadges";
+import { TrustStats } from "@/components/site/TrustStats";
+import { Portfolio } from "@/components/site/Portfolio";
+import { Testimonials } from "@/components/site/Testimonials";
+import { GlobalClients } from "@/components/site/GlobalClients";
+import { PricingTiers } from "@/components/site/PricingTiers";
+import { CTABanner } from "@/components/site/CTABanner";
 import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
@@ -11,7 +17,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Building smart digital products faster with AI. Custom software, websites, mobile apps, AI agents & RAG, and digital marketing for startups and enterprises.",
+          "Auxmet helps US, UK, Canadian, Australian, and European founders ship AI-powered websites, applications, and AI solutions faster and more affordably than traditional agencies.",
       },
       { property: "og:title", content: "Auxmet — AI-Powered Software Development" },
       {
@@ -32,7 +38,13 @@ function Index() {
       <Nav />
       <main>
         <Hero />
-        <Stats />
+        <TrustBadges />
+        <TrustStats />
+        <Portfolio />
+        <PricingTiers />
+        <Testimonials />
+        <GlobalClients />
+        <CTABanner />
       </main>
       <Footer />
     </div>

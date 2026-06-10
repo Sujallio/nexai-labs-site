@@ -1,7 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { PricingTiers } from "@/components/site/PricingTiers";
 import { Pricing } from "@/components/site/Pricing";
+import { TrustBadges } from "@/components/site/TrustBadges";
+import { CTABanner } from "@/components/site/CTABanner";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
@@ -10,7 +13,7 @@ export const Route = createFileRoute("/pricing")({
       {
         name: "description",
         content:
-          "Transparent, project-based pricing — see how AI-powered development compares to traditional agencies.",
+          "Transparent project-based pricing — see how AI-powered development compares to traditional agencies. Plans start at $299.",
       },
       { property: "og:title", content: "Pricing — Auxmet" },
       {
@@ -28,7 +31,10 @@ function PricingPage() {
     <div className="min-h-screen bg-background text-foreground">
       <Nav />
       <main className="pt-8">
+        <PricingTiers />
+        <TrustBadges />
         <Pricing />
+        <CTABanner />
       </main>
       <Footer />
     </div>
