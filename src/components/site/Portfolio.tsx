@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, ExternalLink, FileText } from "lucide-react";
+import { ArrowUpRight, FileText } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 
 const projects = [
@@ -147,20 +147,13 @@ export function Portfolio() {
 
                 <div className="mt-auto flex gap-2 pt-2">
                   <a
-                    href={p.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-md bg-brand px-3 py-2 text-xs font-semibold text-background hover:bg-brand/90"
-                  >
-                    <ExternalLink className="size-3.5" /> Live Demo
-                  </a>
-                  <a
                     href={p.caseUrl}
                     className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-md border border-border bg-surface px-3 py-2 text-xs font-semibold text-foreground hover:bg-secondary"
                   >
                     <FileText className="size-3.5" /> Case Study
                   </a>
                 </div>
+
               </div>
             </motion.article>
           ))}
