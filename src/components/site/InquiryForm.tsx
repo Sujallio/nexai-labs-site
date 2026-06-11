@@ -2,7 +2,8 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { motion } from "framer-motion";
-import { CheckCircle2, Send, Upload } from "lucide-react";
+import { CheckCircle2, Send, Upload, AlertCircle } from "lucide-react";
+import { submitInquiry } from "../../lib/api/example.functions";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Required").max(100),
@@ -49,6 +50,7 @@ const timelines = ["ASAP", "1–3 months", "3–6 months", "6+ months", "Flexibl
 
 export function InquiryForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
@@ -59,9 +61,19 @@ export function InquiryForm() {
   const onSubmit = async (raw: FormData) => {
     const parsed = schema.safeParse(raw);
     if (!parsed.success) return;
-    await new Promise((r) => setTimeout(r, 600));
-    setSubmitted(true);
-    reset();
+    
+    setError(null);
+    try {
+      const result = await submitInquiry({ data: parsed.data });
+      if (result.success) {
+        setSubmitted(true);
+        reset();
+      } else {
+        setError(result.message);
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to submit inquiry");
+    }
   };
 
   return (
@@ -202,6 +214,12 @@ export function InquiryForm() {
                   className="input resize-y"
                 />
               </Field>
+              {error && (
+                <div className="flex items-center gap-2 rounded-md bg-red-50 p-3 text-sm text-red-700 border border-red-200">
+                  <AlertCircle className="size-4 flex-shrink-0" />
+                  <span>{error}</span>
+                </div>
+              )}
               <button
                 type="submit"
                 disabled={isSubmitting}
