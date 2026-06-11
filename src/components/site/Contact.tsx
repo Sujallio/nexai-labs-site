@@ -22,8 +22,8 @@ export function Contact() {
             {
               icon: Mail,
               label: "Email",
-              value: "hello@nexaailabs.com",
-              href: "mailto:hello@nexaailabs.com",
+              value: "hello@auxmet.com",
+              href: "mailto:hello@auxmet.com",
             },
             {
               icon: Linkedin,
