@@ -17,7 +17,7 @@ export function Contact() {
               icon: MessageCircle,
               label: "WhatsApp",
               value: "Chat with us",
-              href: "https://wa.me/10000000000",
+              href: "https://wa.me/918793001079",
             },
             {
               icon: Mail,
