@@ -1,26 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {
-  RouterProvider,
-  createMemoryHistory,
-  createRouter,
-  createRootRoute,
-} from "@tanstack/react-router";
-import { HomePage } from "./home";
+import { RouterProvider } from "@tanstack/react-router";
+import { getRouter } from "./router";
 import "./styles.css";
 
-// Create root route
-const rootRoute = createRootRoute({
-  component: HomePage,
-});
-
-// Create router
-const router = createRouter({
-  routeTree: rootRoute,
-  history: createMemoryHistory({
-    initialEntries: ["/"],
-  }),
-});
+const router = getRouter();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
