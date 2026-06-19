@@ -23,18 +23,18 @@ export default function Careers() {
             we're growing fast.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              to="/contact"
+            <a
+              href="/contact"
               className="rounded-md bg-brand px-5 py-2.5 text-sm font-semibold text-background transition-colors hover:bg-brand/90"
             >
               Get in touch
-            </Link>
-            <Link
-              to="/"
+            </a>
+            <a
+              href="/"
               className="rounded-md border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-surface"
             >
               Back to home
-            </Link>
+            </a>
           </div>
         </section>
       </main>
