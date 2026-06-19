@@ -15,8 +15,7 @@ dist-ssr
 .tanstack/**
 .nitro
 *.local
-.workspace/
-tsconfig.tsbuildinfo
+
 
 # Wrangler / Cloudflare
 .wrangler/
