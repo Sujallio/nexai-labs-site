@@ -10,6 +10,10 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    middlewareMode: false,
+    historyApiFallback: true,
+  },
   build: {
     outDir: "dist",
     sourcemap: false,
