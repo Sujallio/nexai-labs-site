@@ -29,7 +29,7 @@ export function Contact() {
               icon: Linkedin,
               label: "LinkedIn",
               value: "Follow us",
-              href: "https://linkedin.com",
+              href: "https://www.linkedin.com/company/auxmet/",
             },
             {
               icon: CalendarClock,
