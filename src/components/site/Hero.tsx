@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 export function Hero() {
@@ -54,19 +55,19 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-10 flex flex-wrap items-center justify-center gap-3"
         >
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="group inline-flex items-center gap-2 rounded-md bg-brand px-6 py-3 text-sm font-semibold text-background transition-all hover:bg-brand/90 glow-brand"
           >
             Get Free Consultation
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
-          </a>
-          <a
-            href="/work"
+          </Link>
+          <Link
+            to="/work"
             className="inline-flex items-center gap-2 rounded-md border border-border bg-secondary/40 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
           >
             View Our Work
-          </a>
+          </Link>
         </motion.div>
 
         <motion.div

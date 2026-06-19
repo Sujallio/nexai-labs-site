@@ -1,4 +1,5 @@
 import { ArrowRight, Calendar, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function CTABanner({
   title = "Ready to Build Your Next Digital Product?",
@@ -19,25 +20,25 @@ export function CTABanner({
             <p className="mt-3 max-w-xl text-muted-foreground">{description}</p>
           </div>
           <div className="flex flex-wrap gap-3 md:justify-end">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-2 rounded-md bg-brand px-5 py-3 text-sm font-semibold text-background transition-colors hover:bg-brand/90"
             >
               Get Free Consultation
               <ArrowRight className="size-4" />
-            </a>
-            <a
-              href="/book"
+            </Link>
+            <Link
+              to="/book"
               className="inline-flex items-center gap-2 rounded-md border border-border bg-background/60 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-surface"
             >
               <Calendar className="size-4" /> Schedule Call
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-2 rounded-md border border-border bg-background/60 px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-surface"
             >
               <FileText className="size-4" /> Request Proposal
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -8,10 +9,10 @@ export function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <a href="/" className="flex items-center gap-2.5">
+            <Link to="/" className="flex items-center gap-2.5">
               <Logo className="size-7" />
               <span className="font-semibold tracking-tight">Auxmet</span>
-            </a>
+            </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
               Building smart digital products faster with AI. Custom software, web, mobile, and
               AI solutions for ambitious teams worldwide.
@@ -74,9 +75,9 @@ function FooterCol({
       <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
         {items.map((i) => (
           <li key={i.label}>
-            <a href={i.href} className="hover:text-foreground">
+            <Link to={i.href} className="hover:text-foreground">
               {i.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

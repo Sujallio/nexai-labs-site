@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
@@ -35,36 +36,36 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <a href="/" className="flex items-center gap-2.5">
+        <Link to="/" className="flex items-center gap-2.5">
           <Logo className="size-7" />
           <span className="font-semibold tracking-tight">Auxmet</span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
           {links.map((l) => (
-            <a
+            <Link
               key={l.href}
-              href={l.href}
+              to={l.href}
               className="text-muted-foreground transition-colors hover:text-foreground"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <a
-            href="/book"
+          <Link
+            to="/book"
             className="rounded-md border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-surface"
           >
             Book a Call
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className="rounded-md bg-brand px-4 py-2 text-sm font-semibold text-background transition-colors hover:bg-brand/90"
           >
             Get Consultation
-          </a>
+          </Link>
         </div>
 
 
@@ -81,22 +82,22 @@ export function Nav() {
         <div className="border-t border-border bg-background/95 backdrop-blur md:hidden">
           <div className="flex flex-col gap-1 px-6 py-4">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
-                href={l.href}
+                to={l.href}
                 onClick={() => setOpen(false)}
                 className="rounded px-2 py-2 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               onClick={() => setOpen(false)}
               className="mt-2 rounded-md bg-brand px-4 py-2.5 text-center text-sm font-semibold text-background"
             >
               Get Consultation
-            </a>
+            </Link>
           </div>
         </div>
       )}
