@@ -22,8 +22,8 @@ export function Contact() {
             {
               icon: Mail,
               label: "Email",
-              value: "hello@auxmet.com",
-              href: "mailto:hello@auxmet.com",
+              value: "auxmet01@gmail.com",
+              href: "mailto:auxmet01@gmail.com",
             },
             {
               icon: Linkedin,
