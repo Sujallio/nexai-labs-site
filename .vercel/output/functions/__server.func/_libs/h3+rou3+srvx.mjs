@@ -1,6 +1,6 @@
 import { PassThrough, Readable } from "node:stream";
 //#region node_modules/rou3/dist/index.mjs
-const NullProtoObj = /* @__PURE__ */ (() => {
+var NullProtoObj = /* @__PURE__ */ (() => {
 	const e = function() {};
 	return e.prototype = Object.create(null), Object.freeze(e.prototype), e;
 })();
@@ -33,8 +33,8 @@ function lazyInherit(target, source, sourceKey) {
 		if (modified) Object.defineProperty(target, key, desc);
 	}
 }
-const _needsNormRE = /(?:(?:^|\/)(?:\.|\.\.|%2e|%2e\.|\.%2e|%2e%2e)(?:\/|$))|[\\^\x80-\uffff]/i;
-const FastURL = /* @__PURE__ */ (() => {
+var _needsNormRE = /(?:(?:^|\/)(?:\.|\.\.|%2e|%2e\.|\.%2e|%2e%2e)(?:\/|$))|[\\^\x80-\uffff]/i;
+var FastURL = /* @__PURE__ */ (() => {
 	const NativeURL = globalThis.URL;
 	const FastURL = class URL {
 		#url;
@@ -138,7 +138,7 @@ const FastURL = /* @__PURE__ */ (() => {
 })();
 //#endregion
 //#region node_modules/srvx/dist/adapters/node.mjs
-const NodeResponse = /* @__PURE__ */ (() => {
+var NodeResponse = /* @__PURE__ */ (() => {
 	const NativeResponse = globalThis.Response;
 	const STATUS_CODES = globalThis.process?.getBuiltinModule?.("node:http")?.STATUS_CODES || {};
 	class NodeResponse {
@@ -251,10 +251,10 @@ const NodeResponse = /* @__PURE__ */ (() => {
 function decodePathname(pathname) {
 	return decodeURI(pathname.includes("%25") ? pathname.replace(/%25/g, "%2525") : pathname);
 }
-const kEventNS = "h3.internal.event.";
-const kEventRes = /* @__PURE__ */ Symbol.for(`${kEventNS}res`);
-const kEventResHeaders = /* @__PURE__ */ Symbol.for(`${kEventNS}res.headers`);
-const kEventResErrHeaders = /* @__PURE__ */ Symbol.for(`${kEventNS}res.err.headers`);
+var kEventNS = "h3.internal.event.";
+var kEventRes = /* @__PURE__ */ Symbol.for(`${kEventNS}res`);
+var kEventResHeaders = /* @__PURE__ */ Symbol.for(`${kEventNS}res.headers`);
+var kEventResErrHeaders = /* @__PURE__ */ Symbol.for(`${kEventNS}res.err.headers`);
 var H3Event = class {
 	app;
 	req;
@@ -308,7 +308,7 @@ var H3EventResponse = class {
 		return this[kEventResErrHeaders] ||= new Headers();
 	}
 };
-const DISALLOWED_STATUS_CHARS = /[^\u0009\u0020-\u007E]/g;
+var DISALLOWED_STATUS_CHARS = /[^\u0009\u0020-\u007E]/g;
 function sanitizeStatusMessage(statusMessage = "") {
 	return statusMessage.replace(DISALLOWED_STATUS_CHARS, "");
 }
@@ -391,8 +391,8 @@ function isJSONSerializable(value, _type) {
 	const proto = Object.getPrototypeOf(value);
 	return proto === Object.prototype || proto === null;
 }
-const kNotFound = /* @__PURE__ */ Symbol.for("h3.notFound");
-const kHandled = /* @__PURE__ */ Symbol.for("h3.handled");
+var kNotFound = /* @__PURE__ */ Symbol.for("h3.notFound");
+var kHandled = /* @__PURE__ */ Symbol.for("h3.handled");
 function toResponse(val, event, config = {}) {
 	if (typeof val?.then === "function") return val.then((resolvedVal) => toResponse(resolvedVal, event, config), (r) => toResponse(typeof r === "number" ? new HTTPError({ status: r }) : r, event, config));
 	const response = prepareResponse(val, event, config);
@@ -465,7 +465,7 @@ function mergeHeaders$1(base, overrides, target = new Headers(base)) {
 	else target.set(name, value);
 	return target;
 }
-const frozen = (name) => (...args) => {
+var frozen = (name) => (...args) => {
 	throw new Error(`Headers are frozen (${name} ${args.join(", ")})`);
 };
 var FrozenHeaders = class extends Headers {
@@ -473,8 +473,8 @@ var FrozenHeaders = class extends Headers {
 	append = frozen("append");
 	delete = frozen("delete");
 };
-const emptyHeaders = /* @__PURE__ */ new FrozenHeaders({ "content-length": "0" });
-const jsonHeaders = /* @__PURE__ */ new FrozenHeaders({ "content-type": "application/json;charset=UTF-8" });
+var emptyHeaders = /* @__PURE__ */ new FrozenHeaders({ "content-length": "0" });
+var jsonHeaders = /* @__PURE__ */ new FrozenHeaders({ "content-type": "application/json;charset=UTF-8" });
 function prepareResponseBody(val, event, config) {
 	if (val === null || val === void 0) return {
 		body: "",
@@ -586,7 +586,7 @@ function toEventHandler(handler) {
 		return handler.fetch(event.req);
 	};
 }
-const NoHandler = () => kNotFound;
+var NoHandler = () => kNotFound;
 var H3Core = class {
 	static "~h3" = true;
 	config;
@@ -635,4 +635,4 @@ var H3Core = class {
 	}
 };
 //#endregion
-export { NodeResponse as a, defineLazyEventHandler as i, HTTPError as n, HTTPResponse as r, H3Core as t };
+export { NodeResponse as a, defineLazyEventHandler as i, HTTPError as n, FastURL as o, HTTPResponse as r, NullProtoObj as s, H3Core as t };

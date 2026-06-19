@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "@tanstack/react-router";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -9,10 +8,10 @@ export function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center gap-2.5">
+            <a href="/" className="flex items-center gap-2.5">
               <Logo className="size-7" />
               <span className="font-semibold tracking-tight">Auxmet</span>
-            </Link>
+            </a>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
               Building smart digital products faster with AI. Custom software, web, mobile, and
               AI solutions for ambitious teams worldwide.
@@ -22,21 +21,21 @@ export function Footer() {
           <FooterCol
             title="Explore"
             items={[
-              { label: "Services", to: "/services" },
-              { label: "AI Advantage", to: "/advantage" },
-              { label: "Process", to: "/process" },
-              { label: "Work", to: "/work" },
-              { label: "Pricing", to: "/pricing" },
-              { label: "Book a Call", to: "/book" },
+          { label: "Services", href: "/services" },
+              { label: "AI Advantage", href: "/advantage" },
+              { label: "Process", href: "/process" },
+              { label: "Work", href: "/work" },
+              { label: "Pricing", href: "/pricing" },
+              { label: "Book a Call", href: "/book" },
             ]}
           />
 
           <FooterCol
             title="Company"
             items={[
-              { label: "FAQ", to: "/faq" },
-              { label: "Careers", to: "/careers" },
-              { label: "Contact", to: "/contact" },
+              { label: "FAQ", href: "/faq" },
+              { label: "Careers", href: "/careers" },
+              { label: "Contact", href: "/contact" },
             ]}
           />
 
@@ -65,7 +64,7 @@ function FooterCol({
   items,
 }: {
   title: string;
-  items: { label: string; to: string }[];
+  items: { label: string; href: string }[];
 }) {
   return (
     <div>
@@ -75,9 +74,9 @@ function FooterCol({
       <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
         {items.map((i) => (
           <li key={i.label}>
-            <Link to={i.to} className="hover:text-foreground">
+            <a href={i.href} className="hover:text-foreground">
               {i.label}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>

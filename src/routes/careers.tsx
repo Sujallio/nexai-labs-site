@@ -1,29 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { Briefcase } from "lucide-react";
 
-export const Route = createFileRoute("/careers")({
-  head: () => ({
-    meta: [
-      { title: "Careers — Auxmet" },
-      {
-        name: "description",
-        content:
-          "Join Auxmet — explore open roles at our AI-powered software development team.",
-      },
-      { property: "og:title", content: "Careers — Auxmet" },
-      {
-        property: "og:description",
-        content: "Open roles at Auxmet.",
-      },
-    ],
-    links: [{ rel: "canonical", href: "/careers" }],
-  }),
-  component: CareersPage,
-});
-
-function CareersPage() {
+export default function Careers() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Nav />

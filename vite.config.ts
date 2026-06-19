@@ -1,17 +1,18 @@
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import path from "path";
 
 export default defineConfig({
+  plugins: [tailwindcss(), react()],
   resolve: {
-    tsconfigPaths: true,
-  },
-  tanstackStart: {
-    server: { entry: "server" },
-  },
-  nitro: {
-    preset: "vercel",
-    output: {
-      dir: ".output",
-      publicDir: ".output/public",
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    outDir: "dist",
+    sourcemap: false,
+    minify: "terser",
   },
 });
