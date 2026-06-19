@@ -1,6 +1,6 @@
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
-import { Contact } from "@/components/site/Contact";
+import { Contact as ContactSection } from "@/components/site/Contact";
 import { InquiryForm } from "@/components/site/InquiryForm";
 import { Booking } from "@/components/site/Booking";
 import { TrustBadges } from "@/components/site/TrustBadges";
@@ -13,7 +13,7 @@ export default function Contact() {
         <InquiryForm />
         <TrustBadges />
         <Booking />
-        <Contact />
+        <ContactSection />
       </main>
       <Footer />
     </div>

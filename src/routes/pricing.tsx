@@ -1,7 +1,7 @@
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { PricingTiers } from "@/components/site/PricingTiers";
-import { Pricing } from "@/components/site/Pricing";
+import { Pricing as PricingSection } from "@/components/site/Pricing";
 import { TrustBadges } from "@/components/site/TrustBadges";
 import { CTABanner } from "@/components/site/CTABanner";
 
@@ -12,7 +12,7 @@ export default function Pricing() {
       <main className="pt-8">
         <PricingTiers />
         <TrustBadges />
-        <Pricing />
+        <PricingSection />
         <CTABanner />
       </main>
       <Footer />
