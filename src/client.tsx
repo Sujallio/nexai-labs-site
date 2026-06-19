@@ -6,7 +6,7 @@ import "./styles.css";
 const root = document.getElementById("root");
 if (root) {
   createRoot(root).render(
-    <BrowserRouter>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <App />
     </BrowserRouter>
   );
