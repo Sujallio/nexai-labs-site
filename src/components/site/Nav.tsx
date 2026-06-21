@@ -55,12 +55,6 @@ export function Nav() {
 
         <div className="hidden items-center gap-3 md:flex">
           <Link
-            to="/book"
-            className="rounded-md border border-border px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-surface"
-          >
-            Book a Call
-          </Link>
-          <Link
             to="/contact"
             className="rounded-md bg-brand px-4 py-2 text-sm font-semibold text-background transition-colors hover:bg-brand/90"
           >
