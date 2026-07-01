@@ -64,7 +64,7 @@ export function InquiryForm() {
     
     setError(null);
     try {
-      const result = await submitInquiry({ data: parsed.data });
+      const result = await submitInquiry(parsed.data);
       if (result.success) {
         setSubmitted(true);
         reset();
@@ -122,9 +122,11 @@ export function InquiryForm() {
               <div className="flex size-12 items-center justify-center rounded-full bg-brand/15 text-brand">
                 <CheckCircle2 className="size-6" />
               </div>
-              <h3 className="mt-5 text-xl font-semibold">Inquiry received</h3>
+              <h3 className="mt-5 text-xl font-semibold">
+                Inquiry received - Our team will review your requirements and contact you within 24 hours
+              </h3>
               <p className="mt-2 max-w-sm text-sm text-muted-foreground">
-                Our team will review your requirements and contact you within 24 hours.
+                A confirmation email has been sent to you, and the details have been forwarded to our team.
               </p>
               <button
                 onClick={() => setSubmitted(false)}
